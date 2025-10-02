@@ -1,0 +1,13 @@
+.env
+```
+PYTHON_VERSION=3.10.13
+ENV_NAME=tryton_venv
+TRYTON_DB=gh_dev
+TRYTOND_PORT=8000
+PGHOST=localhost
+PGPORT=5432
+PGUSER=user
+PGPASSWORD=passuser
+USER=user
+ADDONS_PATH=src/custom
+```
