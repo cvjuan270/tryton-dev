@@ -13,7 +13,7 @@ Este proyecto te ayuda a levantar un entorno de desarrollo para GNU Health sobre
 
 - Linux (Ubuntu recomendado)
 - `pyenv` y `pyenv-virtualenv` instalados
-- Python 3.8+ (recomendado)
+- Python 3.10 (recomendado)
 - Git
 - Un archivo `.env` con tus variables (ver ejemplo abajo)
 
@@ -21,8 +21,8 @@ Este proyecto te ayuda a levantar un entorno de desarrollo para GNU Health sobre
 
 1. **Clona el repo:**
    ```sh
-   git clone https://github.com/tuusuario/gnuhealth-tryton-bootstrap.git
-   cd gnuhealth-tryton-bootstrap
+   git clone git@github.com:cvjuan270/tryton-dev.git
+   cd tryton-dev
 
 2. **Crea tu archivo `.env`:**
 ```
@@ -35,7 +35,6 @@ PGPORT=5432
 PGUSER=user
 PGPASSWORD=passuser
 USER=user
-ADDONS_PATH=src/custom
 ```
 3. **Ejecuta el bootstrap:**
    ```sh

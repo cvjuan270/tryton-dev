@@ -66,4 +66,5 @@ path = /home/$USER/work/tryton-dev/attach/
 modules_path = $MODULES_PATH
 EOF
 
-# Modules
+# Modules dir
+mkdir custom-addons
