@@ -4,11 +4,14 @@ set -a # Exporta automáticamente las variables leídas
 source .env
 set +a # Deja de exportar automáticamente
 
+# Obtener el directorio donde está el script
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # Variables configurables
-MODULE_NAME=$1 # Nombre del módulo como argumento
+MODULE_NAME=$1                                      # Nombre del módulo como argumento
+DEST_DIR=${2:-"$HOME/work/tryton-dev/HDCO_HEALTH/"} # Directorio destino, por defecto el anterior
 COOKIECUTTER_TEMPLATE="./common/tryton-branch-default/cookiecutter-module/"
 MODULES_DIR="$VIRTUAL_ENV/lib/python${PYTHON_VERSION%.*}/site-packages/trytond/modules/"
-CUSTOM_DIR="$HOME/work/tryton-dev/custom/"
+CUSTOM_DIR=${2:-"$SCRIPT_DIR/custom-addons/"}
 
 # Validar que se haya pasado el nombre del módulo
 if [ -z "$MODULE_NAME" ]; then
